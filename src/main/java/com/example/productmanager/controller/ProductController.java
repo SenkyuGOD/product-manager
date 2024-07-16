@@ -34,7 +34,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpStatus delete(@PathVariable Long id) {
+    public HttpStatus delete(@PathVariable("id") Long id) {
         productService.deleteProduct(id);
         return HttpStatus.OK;
     }
