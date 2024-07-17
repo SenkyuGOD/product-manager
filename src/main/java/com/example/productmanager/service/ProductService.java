@@ -4,7 +4,6 @@ import com.example.productmanager.dao.ProductDAO;
 import com.example.productmanager.entity.Product;
 import com.example.productmanager.repository.ProductRepository;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +11,14 @@ import java.util.List;
 
 @Service
 @Transactional
-@AllArgsConstructor
 public class ProductService {
 
+    private final ProductRepository productRepository;
+
     @Autowired
-    private ProductRepository productRepository;
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     public Product createProduct(ProductDAO productDAO) {
         Product product = Product.builder()
