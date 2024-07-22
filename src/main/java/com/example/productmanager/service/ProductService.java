@@ -2,7 +2,7 @@ package com.example.productmanager.service;
 
 import com.example.productmanager.dao.ProductDAO;
 import com.example.productmanager.entity.Product;
-import com.example.productmanager.repository.ProductRepository;
+import com.example.productmanager.repository.impl.ProductRepositoryImpl;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import java.util.List;
 @Transactional
 public class ProductService {
 
-    private final ProductRepository productRepository;
+    private final ProductRepositoryImpl productRepository;
 
     @Autowired
-    public ProductService(ProductRepository productRepository) {
+    public ProductService(ProductRepositoryImpl productRepository) {
         this.productRepository = productRepository;
     }
 
