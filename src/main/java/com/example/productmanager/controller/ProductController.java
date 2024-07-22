@@ -1,6 +1,6 @@
 package com.example.productmanager.controller;
 
-import com.example.productmanager.dao.ProductDAO;
+import com.example.productmanager.dto.ProductDTO;
 import com.example.productmanager.entity.Product;
 import com.example.productmanager.service.ProductService;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping
-    public ResponseEntity<Product> create(@RequestBody ProductDAO dao) {
+    public ResponseEntity<Product> create(@RequestBody ProductDTO dao) {
         return new ResponseEntity<>(productService.createProduct(dao), HttpStatus.OK);
     }
 

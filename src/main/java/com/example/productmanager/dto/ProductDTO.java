@@ -1,9 +1,9 @@
-package com.example.productmanager.dao;
+package com.example.productmanager.dto;
 
 import lombok.Data;
 
 @Data
-public class ProductDAO {
+public class ProductDTO {
 
     private String name;
     private Short amount;

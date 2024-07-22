@@ -1,6 +1,6 @@
 package com.example.productmanager.service;
 
-import com.example.productmanager.dao.ProductDAO;
+import com.example.productmanager.dto.ProductDTO;
 import com.example.productmanager.entity.Product;
 import com.example.productmanager.repository.impl.ProductRepositoryImpl;
 import jakarta.transaction.Transactional;
@@ -20,10 +20,10 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public Product createProduct(ProductDAO productDAO) {
+    public Product createProduct(ProductDTO productDTO) {
         Product product = Product.builder()
-                .name(productDAO.getName())
-                .amount(productDAO.getAmount())
+                .name(productDTO.getName())
+                .amount(productDTO.getAmount())
                 .build();
         return productRepository.save(product);
     }
