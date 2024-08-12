@@ -1,4 +1,4 @@
-package com.example.product_manager_v2.dao;
+package com.example.product_manager_v2.exception;
 
 public class DaoException extends Exception {
 

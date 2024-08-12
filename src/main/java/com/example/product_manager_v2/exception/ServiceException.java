@@ -1,4 +1,4 @@
-package com.example.product_manager_v2.service;
+package com.example.product_manager_v2.exception;
 
 import java.io.Serial;
 

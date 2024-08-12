@@ -2,7 +2,7 @@ package com.example.product_manager_v2.controller;
 
 import com.example.product_manager_v2.entity.Order;
 import com.example.product_manager_v2.service.OrderService;
-import com.example.product_manager_v2.service.ServiceException;
+import com.example.product_manager_v2.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

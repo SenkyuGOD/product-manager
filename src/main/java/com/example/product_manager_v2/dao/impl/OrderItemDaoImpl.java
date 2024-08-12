@@ -1,6 +1,6 @@
 package com.example.product_manager_v2.dao.impl;
 
-import com.example.product_manager_v2.dao.DaoException;
+import com.example.product_manager_v2.exception.DaoException;
 import com.example.product_manager_v2.dao.OrderItemDao;
 import com.example.product_manager_v2.entity.OrderItem;
 import org.hibernate.Session;

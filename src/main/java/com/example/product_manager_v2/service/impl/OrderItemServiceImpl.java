@@ -1,10 +1,10 @@
 package com.example.product_manager_v2.service.impl;
 
-import com.example.product_manager_v2.dao.DaoException;
+import com.example.product_manager_v2.exception.DaoException;
 import com.example.product_manager_v2.dao.OrderItemDao;
 import com.example.product_manager_v2.entity.OrderItem;
 import com.example.product_manager_v2.service.OrderItemService;
-import com.example.product_manager_v2.service.ServiceException;
+import com.example.product_manager_v2.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

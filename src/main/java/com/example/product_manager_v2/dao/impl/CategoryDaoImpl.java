@@ -1,7 +1,7 @@
 package com.example.product_manager_v2.dao.impl;
 
 import com.example.product_manager_v2.dao.CategoryDao;
-import com.example.product_manager_v2.dao.DaoException;
+import com.example.product_manager_v2.exception.DaoException;
 import com.example.product_manager_v2.entity.Category;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
