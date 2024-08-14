@@ -1,29 +1,33 @@
 package com.example.product_manager_v2.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order implements Serializable {
-    @Serial
-    private static final long serialVersionUID = 1L;
+@Table(name = "product_order")
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "status")
     private String status;
+
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
+
     @OneToMany(mappedBy = "order")
+    @JsonIgnore
     private List<OrderItem> orderItems;
 }
